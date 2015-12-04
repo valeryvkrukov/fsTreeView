@@ -24,42 +24,45 @@ jQuery(document).ready(function($){
 	});
 });
 ```
-#### Example of JSON data
+#### Example of JSON response
 ```
-[{
-	name:'folder1',
-	type:'folder',
-	path:'/opt/folder1',
-	items:[{
-		name:'folder2',
+{
+	status:'ok',
+	files:[{
+		name:'folder1',
 		type:'folder',
-		path:'/opt/folder1/folder2',
+		path:'/opt/folder1',
 		items:[{
-			name:'file5.txt',
+			name:'folder2',
+			type:'folder',
+			path:'/opt/folder1/folder2',
+			items:[{
+				name:'file5.txt',
+				type:'file',
+				path:'/opt/folder1/folder2/file5.txt',
+				size:'3456'
+			}]
+		},{
+			name:'file3.txt',
 			type:'file',
-			path:'/opt/folder1/folder2/file5.txt',
+			path:'/opt/folder1/file3.txt',
 			size:'3456'
+		},{
+			name:'file4.txt',
+			type:'file',
+			path:'/opt/folder1/file4.txt',
+			size:'4567'
 		}]
 	},{
-		name:'file3.txt',
+		name:'file1.txt',
 		type:'file',
-		path:'/opt/folder1/file3.txt',
-		size:'3456'
+		path:'/opt/file1.txt',
+		size:'12345'
 	},{
-		name:'file4.txt',
+		name:'file2.txt',
 		type:'file',
-		path:'/opt/folder1/file4.txt',
-		size:'4567'
+		path:'/opt/file2.txt',
+		size:'23456'
 	}]
-},{
-	name:'file1.txt',
-	type:'file',
-	path:'/opt/file1.txt',
-	size:'12345'
-},{
-	name:'file2.txt',
-	type:'file',
-	path:'/opt/file2.txt',
-	size:'23456'
-}];
+};
 ```

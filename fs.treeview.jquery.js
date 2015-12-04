@@ -112,9 +112,9 @@
 		};
 		self.init();
 	};
-	$.fn.fsTreeView=function(dataApiUrl){
+	$.fn.fsTreeView=function(options){
 		return this.each(function(){
-			(new $.fsTreeView(this,dataApiUrl));
+			(new $.fsTreeView(this,options));
 		});
 	};
 })(jQuery);
